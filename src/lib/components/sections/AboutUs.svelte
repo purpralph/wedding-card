@@ -36,8 +36,8 @@
                  rounded-3xl sm:max-w-md lg:max-w-full"
         >
           <img
-            src="/images/proposal.webp"
-            alt="Engagement at Larkya La Pass"
+            src="/images/our-story-scroll-placeholder.webp"
+            alt="Couple engagement portrait placeholder"
             class="block aspect-3/4 h-auto w-full object-cover"
           />
         </div>

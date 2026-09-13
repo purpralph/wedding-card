@@ -1,5 +1,8 @@
 allowBuilds:
   esbuild: true
+  netlify-cli: true
+  sharp: true
+  unix-dgram: true
 minimumReleaseAgeExclude:
   - '@sveltejs/acorn-typescript@1.0.10'
   - '@types/node@25.9.1'

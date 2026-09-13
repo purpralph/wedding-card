@@ -1,33 +1,30 @@
-// Wedding event constants
+// Wedding event constants — customize these first
 
 export const WEDDING = {
   // Couple names
   // NOTE: internally these are "bride" and "groom" for ease of use in copy
-  // Sorry for the heteronormative default labels here - feel free to change as needed!
+  // Feel free to change the labels/values for your celebration
   couple: {
-    bride: 'Partner1',
-    groom: 'Partner2',
-    full: 'Partner1 & Partner2',
-    initials: 'X & Y',
+    bride: 'Alex',
+    groom: 'Jordan',
+    full: 'Alex & Jordan',
+    initials: 'A & J',
   },
 
   // Dates
-  // Example dates for template: Replace as needed!
   dates: {
-    start: '2027-01-01',
-    end: '2027-01-03',
-    ceremony: '2027-01-02',
-    // NOTE: Update this with the ceremony time for countdown
-    ceremonyDateTime: '2027-01-02T16:20:00+10:00',
-    // Somewhat hacky - simply redefine as strings for display
-    displayFull: '1st - 3rd January 2027',
-    displayDay1: '1st January 2027',
-    displayDay2: '2nd January 2027',
-    displayDay3: '3rd January 2027',
+    start: '2027-06-18',
+    end: '2027-06-20',
+    ceremony: '2027-06-19',
+    // Update ceremony time for the countdown (ISO 8601 with timezone)
+    ceremonyDateTime: '2027-06-19T16:00:00+10:00',
+    displayFull: '18th – 20th June 2027',
+    displayDay1: '18th June 2027',
+    displayDay2: '19th June 2027',
+    displayDay3: '20th June 2027',
   },
 
   // Countdown
-  // NOTE: all logic for dates will be set on component.
   countdown: {
     isPastTarget: 'Til death do us part!',
     isNotPastTarget: 'Time until I do',
@@ -35,23 +32,23 @@ export const WEDDING = {
 
   // Venue
   venue: {
-    name: 'Your Venue Name',
-    address: 'Your City, Region',
-    fullAddress: '123 Venue Street, City, Region, Country',
-    displayShort: 'Your Venue Name - Your City, Region',
+    name: 'Seaside Gardens',
+    address: 'Coastal Town, Region',
+    fullAddress: '100 Garden Lane, Coastal Town, Region, Country',
+    displayShort: 'Seaside Gardens — Coastal Town',
     description:
-      'A beautiful venue with scenic views and great spaces for celebrating with family and friends.',
-    website: 'https://your-venue-website.example.com',
+      'A beautiful venue with scenic views and warm spaces for celebrating with family and friends. Replace this description with your venue details.',
+    website: 'https://example.com',
   },
 
   // Contact
   contact: {
     groom: {
-      email: 'partner-two@example.com',
+      email: 'jordan@example.com',
       phone: '+00 000 000 000',
     },
     bride: {
-      email: 'partner-one@example.com',
+      email: 'alex@example.com',
       phone: '+00 000 000 001',
     },
   },
@@ -62,43 +59,43 @@ export const RSVP_LIMITS = {
   guestCountMax: 5, // Including main guest
 } as const;
 
-// Love story facts
+// Love story facts shown on Our Story
 export const LOVE_FACTS = [
   {
-    icon: 'ph:van',
+    icon: 'ph:heart',
     animation: 'pulse',
-    label: 'The Initial Meeting • 2021-2023',
+    label: 'How We Met',
     bullets: [
-      `**First Dates**: First date story here.`,
-      `**Progressing**: Some fun facts and progressing [hint](tooltip:Look like this, or can be defined in inlineTooltips).`,
-      `**Key Fun Facts**: Initial years keypoints.`,
+      `**First hello**: Replace with your meeting story.`,
+      `**Spark**: A fun detail guests will remember.`,
+      `**Hint**: You can add [tooltips](tooltip:meeting) for extra flavour.`,
     ],
   },
   {
     icon: 'ph:airplane-tilt',
     animation: 'pulse',
     label: 'Adventures',
-    text: 'List a few places you have explored together',
+    text: 'List a few places or milestones you have shared together.',
   },
   {
-    icon: 'ph:sketch-logo',
+    icon: 'ph:ring',
     animation: 'pulse',
     label: 'The Proposal',
-    text: 'Share where or how the proposal happened',
+    text: 'Share where or how the proposal happened.',
   },
 ] as const;
 
-// Timeline events
+// Timeline events (Wedding weekend page)
 export const TIMELINE_EVENTS = [
   {
     dayLabel: 'Friday',
     title: 'Arrival & Welcome',
     date: WEDDING.dates.displayDay1,
     description:
-      "Arrive, settle into your room and breathe in that sea air. We'll have a casual welcome drink in the evening so everyone can mingle and relax after the drive.",
+      "Arrive, settle in, and take a breath. We'll host a casual welcome drink in the evening so everyone can mingle and relax.",
     bullets: [
       '**Check-in** opens from 2:00 PM',
-      '**Welcome Drinks:** from 6:00 PM on the main lawn',
+      '**Welcome Drinks:** from 6:00 PM',
       '**Need Directions?** See [venue details](/venue)',
     ],
     isHighlight: false,
@@ -108,11 +105,11 @@ export const TIMELINE_EVENTS = [
     title: 'Ceremony & Celebration',
     date: WEDDING.dates.displayDay2,
     description:
-      'The ceremony will be held on the grounds overlooking the ocean, followed by lawn games, canapés and a relaxed dinner and dancing under the stars.',
+      'The ceremony will be held on the grounds, followed by drinks, dinner, and dancing into the evening.',
     bullets: [
       'Ceremony begins at 4:00 PM',
-      'Cocktail hour and canapes after vows',
-      'Dinner, speeches, then dance floor opens',
+      'Cocktail hour and canapés after vows',
+      'Dinner, speeches, then the dance floor opens',
     ],
     isHighlight: true,
   },
@@ -121,7 +118,7 @@ export const TIMELINE_EVENTS = [
     title: 'Slow Goodbyes',
     date: WEDDING.dates.displayDay3,
     description:
-      "Sleep in, grab a coffee, wander the cliffs or dip your toes in the water. We'll share a simple brunch before saying our goodbyes. Travel plans... Next steps etc etc.",
+      "Sleep in, grab a coffee, and enjoy a simple brunch before saying goodbye. Safe travels home.",
     bullets: [
       'Casual brunch from 9:30 AM',
       'Check-out by 11:00 AM unless arranged otherwise',
